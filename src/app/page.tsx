@@ -1,5 +1,9 @@
 import Navbar from '@/components/landing/nav'
+import Features from '@/components/landing/nav/features'
 import Hero from '@/components/landing/nav/hero'
+import Integration from '@/components/landing/nav/integration'
+import Pricing from '@/components/landing/nav/pricing'
+import Socialproof from '@/components/landing/nav/social'
 import React from 'react'
 
 const Page = () => {
@@ -8,6 +12,10 @@ const Page = () => {
       <main className='w-full flex flex-col relative'>
         <Navbar/>
         <Hero/>
+        <Socialproof/>
+        <Features/>
+        <Integration/>
+        <Pricing/>
       </main>
     </div>
   )

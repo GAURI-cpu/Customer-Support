@@ -1,5 +1,5 @@
 import { TextRevealHero } from "@/components/ui/text-reveal-card";
-import { ArrowRight, User } from "lucide-react";
+import { ArrowRight, Send, User } from "lucide-react";
 import React from "react";
 import Image from "next/image";
 
@@ -113,9 +113,20 @@ const Hero = () => {
 
                   <div className="space-y-2">
                     <div className="p-4 rounded-2xl text-sm leading-relaxed shadow-sm bg-white text-zinc-900 rounded-tl-sm">
-                      Oneminute Stack is an integrated ecosystem system that design to
-                       enhance the developer efficiency .It include tools like Oneminute logs.
-                    </div>              
+                      Oneminute Stack is an integrated ecosystem system that
+                      design to enhance the developer efficiency .It include
+                      tools like Oneminute logs.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-4  bg-[#0a0a0e] border-t border-white/5 shrink-0">
+                <div className="relative">
+                  <div className="min-h-12.5 w-full px-4 py-3 text-sm mt-35 bg-zinc-800 flex items-center justify-between rounded-xl">
+                    <span className="text-white/50">Type a message...</span>
+                    <button className="h-8 w-8  rounded-lg bg-zinc-700 flex items-center justify-center">
+                      <Send className="w-4 h-4" />
+                    </button>
                   </div>
                 </div>
               </div>

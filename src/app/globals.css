@@ -109,17 +109,17 @@
 }
 
 .animate-float {
-animati: float-gentle 6s ease-in-out infinite;
+animation: float-gentle 6s ease-in-out infinite;
 
 }
 
 .glass-card {
-backgroup: rgba(255, 255, 255, 0.02);
+background: rgba(121, 29, 29, 0.02);
 backdrop-filter: blur(12px);
 
   border: 1px *solid* rgba(255, 255, 255, 0.08);
 
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(65, 64, 64, 0.1);
 
 }
 

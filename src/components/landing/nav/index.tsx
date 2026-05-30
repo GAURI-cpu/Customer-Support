@@ -1,7 +1,9 @@
+import { isAuthorized } from "@/lib/isAuthorized";
 import Link from "next/link";
 import React from "react";
 
-const Navbar = () => {
+const Navbar = async () => {
+  const user = await isAuthorized();
   return (
     <nav className="top-0 fixed inset-x-0 z-50 transition-all duration-300 backdrop-blur-sm border-white/5 bg-[#050509]/50">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 h-16">
@@ -24,19 +26,38 @@ const Navbar = () => {
           >
             Integration
           </Link>
-          <Link href="#price" className="hover:text-white transition-colors">
+          <Link href="#pricing" className="hover:text-white transition-colors">
             Pricing
           </Link>
         </div>
 
         <div className="gap-4 flex items-center">
-            <Link  href="/api/auth" className=" text-lg font-semibold text-red-700 hover:text-white transition-colors no-underline">
-            Sign In
-            </Link>
+          {user ? (
+            <div className="items-center flex gap-3">
+              <Link
+                href="/dashboard"
+                className=" h-10 text-md font-semibold bg-white text-black px-4 py-2 rounded-2xl "
+              >
+                Dashboard
+              </Link>
+            </div>
+          ) : (
+            <>
+              <Link
+                href="/api/auth"
+                className=" text-lg font-semibold text-white hover:text-white transition-colors no-underline"
+              >
+                Sign In
+              </Link>
 
-            <Link  href="/api/auth" className=" text-sm font-semibold bg-white text-black px-4 py-3 rounded-2xl  ">
-            Get Started
-            </Link>
+              <Link
+                href="/api/auth"
+                className=" text-sm font-semibold bg-white text-black px-4 py-3 rounded-2xl  "
+              >
+                Get Started
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </nav>

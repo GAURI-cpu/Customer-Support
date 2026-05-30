@@ -1,5 +1,6 @@
 import Navbar from '@/components/landing/nav'
 import Features from '@/components/landing/nav/features'
+import Footer from '@/components/landing/nav/footer'
 import Hero from '@/components/landing/nav/hero'
 import Integration from '@/components/landing/nav/integration'
 import Pricing from '@/components/landing/nav/pricing'
@@ -16,6 +17,7 @@ const Page = () => {
         <Features/>
         <Integration/>
         <Pricing/>
+        <Footer/>
       </main>
     </div>
   )
